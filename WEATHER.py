@@ -48,3 +48,21 @@ def open_main_window():
 
     background_label = tk.Label(main_window, image=background_image)
     background_label.place(relwidth=1, relheight=1)
+
+# Cover page
+cover_page = tk.Tk()
+cover_page.geometry("767x547")
+cover_page.title("Weather App Cover Page")
+
+# Pillow for cover page
+cover_image_path = r"C:\Users\user pc\Pictures\853710_weather-wallpapers-free-desktop-backgrounds-wallpapers" \
+                   r"-path_1920x1200_h.jpg"
+cover_pil_image = Image.open(cover_image_path)
+cover_background_image = ImageTk.PhotoImage(cover_pil_image)
+
+cover_background_label = tk.Label(cover_page, image=cover_background_image)
+cover_background_label.place(relwidth=1, relheight=1)
+
+cover_label = tk.Label(cover_page, text="Welcome to K.H.A.K.E Weather App", font=("impact", 25), fg="midnightblue",
+                       bg="white")
+cover_label.pack(pady=20)
