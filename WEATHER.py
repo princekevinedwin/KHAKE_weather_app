@@ -89,3 +89,10 @@ result_label = tk.Label(main_window, textvariable=result_text, font=("arial", 15
 result_label.pack(pady=0, padx=10)
 
 main_window.mainloop()
+
+# Button to open the main window
+open_main_button = tk.Button(cover_page, text="OPEN", command=open_main_window, font=("arial black", 15),
+                             fg="midnightblue", bg="white")
+open_main_button.pack(pady=10)
+
+cover_page.mainloop()
