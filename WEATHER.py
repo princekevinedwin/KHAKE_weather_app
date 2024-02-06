@@ -38,7 +38,7 @@ def open_main_window():
     global city_entry, result_text
     cover_page.destroy()
     main_window = tk.Tk()
-    main_window.geometry("767x547")
+    main_window.https://github.com/princekevinedwin/KHAKE_weather_app.gitgeometry("767x547")
     main_window.title("K.H.A.K.E weather app")
 
     # Pillow
@@ -66,3 +66,26 @@ cover_background_label.place(relwidth=1, relheight=1)
 cover_label = tk.Label(cover_page, text="Welcome to K.H.A.K.E Weather App", font=("impact", 25), fg="midnightblue",
                        bg="white")
 cover_label.pack(pady=20)
+
+# Widgets
+city_label = tk.Label(main_window, text="Enter city:", font=("Times new roman", 20, "bold"), fg="white",
+                        bg="midnightblue", width=10)
+city_label.pack(pady=(240, 0), padx=5, anchor='center')
+
+city_entry = tk.Entry(main_window, font=("Times new roman", 15), width=16)
+city_entry.pack(pady=0, padx=20)
+
+search_button = tk.Button(main_window, text="Get Weather", command=get_weather, font=("Times new roman", 15),
+                            fg="midnightblue", bg="white")
+search_button.pack(pady=10, padx=10)
+
+header_label = tk.Label(main_window, text="Weather Information ↓ ↓", font=("arial black", 15, "bold"), fg="white",
+                        bg="midnightblue", width=36)
+header_label.pack(pady=0, padx=10)
+
+result_text = tk.StringVar()
+result_label = tk.Label(main_window, textvariable=result_text, font=("arial", 15), anchor="center", justify="left",
+                        width=46)
+result_label.pack(pady=0, padx=10)
+
+main_window.mainloop()
